@@ -10,9 +10,10 @@ if 'test' not in globals():
 @data_loader
 def load_data_from_api(*args, **kwargs):
     """
-    Template for loading data from API
+    Fazer o Load dos dados da por API aqui 
+    segue um exemplo de url
     """
-    url = 'https://storage.googleapis.com/uber-data-engineering-project-darshil/uber_data.csv'
+    url = 'https://storage.googleapis.com/uber-data-engineering-project-FAL/uber_data.csv'
     response = requests.get(url)
 
     return pd.read_csv(io.StringIO(response.text), sep=',')
@@ -21,6 +22,6 @@ def load_data_from_api(*args, **kwargs):
 @test
 def test_output(output, *args) -> None:
     """
-    Template code for testing the output of the block.
+    Pode ser usado para testar a saído dos dados
     """
     assert output is not None, 'The output is undefined'
